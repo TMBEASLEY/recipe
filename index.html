@@ -301,7 +301,6 @@
             </section>
             </section>
         </aside>
-    
     <nav>
         <h2>Main Navigation</h2>
         <input type="checkbox" id="dropdown" />
@@ -345,6 +344,21 @@
                     </svg><span>Sign In</span></a></li>
         </ul>
     </nav>
+    <form id="search-bar" role="search" onsubmit="return false;">
+        <div class="search-container">
+          <label for="search-input" class="hidden">Search</label>
+          <input type="text" id="search-input" placeholder="Find a recipe" aria-label="Search bar">
+          <button type="button" aria-label="Search">
+            <svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-search" width="40" height="40"
+              viewBox="0 0 24 24" stroke-width="1.5" stroke="#FFFFFF" fill="none" stroke-linecap="round"
+              stroke-linejoin="round">
+              <path stroke="none" d="M0 0h24v24H0z" fill="none" />
+              <circle cx="10" cy="10" r="7" />
+              <line x1="21" y1="21" x2="15" y2="15" />
+            </svg>
+          </button>
+        </div>
+      </form>
     <footer>
         <h2 class="hide">Connect</h2>
         <section>
