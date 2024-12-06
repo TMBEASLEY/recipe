@@ -308,7 +308,7 @@ aside h2{
 #copyright{
     justify-content: center;
     display: flex;
-    flex-direction: column;
+    flex-direction: column-reverse;
     align-items: center;
     text-align: center;
     padding: 20px;
