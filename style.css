@@ -1,5 +1,3 @@
-/* Import Fonts*/
-@import url('https://fonts.google.com/share?selection.family=Bebas%20Neue%7CMontserrat:ital,wght@0,400;0,700;1,400 ')
 /* CSS reset */
 /* http://meyerweb.com/eric/tools/css/reset/
 v2.0 | 20110126
@@ -55,23 +53,33 @@ table {
     --blue:#7ABFBF;
     --transparent-blue:rgba(122, 191, 191, .5);
     --orange: #EB5428;
+    --box-shadow: 0px 3px 3px #bbb;
 }
 
 /*------------------------------ GLOBAL STYLES ------------------------------*/
 body{
-    font-family: 'Bebas Neue', sans-serif;
-    font-weight: 400;
+    padding: 200px 0 0 0;
+    margin: 0;
     background-color: var(--white);
+    position: relative;
 }
-h1, h2, h3{
+p, h4, dd, dt{
+    font-family: "Montserrat", serif;
+    font-size: 1.25em;
+}
+h1, h2, h3, menu, nav, #socials, #copyright small{
+    font-family: "Bebas Neue", sans-serif;
     text-transform: uppercase;
 }
 h1{
     position: relative;
-    top: 150px;
+    top: 10px;
     display: flex;
     justify-content: center;
-    font-size: 2em;
+    font-size: 4em;
+    font-weight: 700;
+    font-style: regular;
+    padding: 50px;
 }
 h2{
     font-size: 1.75em;
@@ -79,35 +87,28 @@ h2{
 h3{
     font-size: 1.5em;
 }
-#search-bar{
-    position: absolute;
-    top: 100px;
-    left: 0;
-    right: 0;
-    margin: 0 auto;
-    width: 300px;
-}
-.search-container{
-    display: flex;
-    align-items: center;
-}
-.search-container label{
-    display: none;
-}
-.search-container button{
-    background: var(--orange);
-    border: none;
-    cursor: pointer;
-}
-#search-input{
-    border: 2px solid var(--orange);
-    flex-grow: 1;
-    padding: 13px;
-}
 #taco-pic{
     display: inline-block;
     max-width: 100%;
     height: auto;
+}
+menu, #socials{
+    position: relative;
+    display: flex;
+    justify-content: space-evenly;
+    width: 100%;
+    padding: 0 0 10px 0;
+}
+menu a , #socials a{
+    font-size: 1.25em;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: var(--orange);
+    text-decoration: none;
+}
+menu li, #socials li{
+    list-style: none;
 }
 nav {
     grid-area: nav;
@@ -117,6 +118,9 @@ nav {
     position: fixed;
     top: 0;
     z-index:5;
+    height: 110px;
+    margin: 0 auto;
+    font-size: 1.5em;
 }
 nav ul {
     grid-area: hamburger;
@@ -125,6 +129,7 @@ nav ul {
     list-style: none;
     overflow: hidden;
     max-height: 0;
+    
 }
 nav li img {
     display: none;
@@ -139,8 +144,8 @@ nav label {
     display: inline-block;
     user-select: none;
     position: relative;
-    bottom: 5px;
-    left: 30px;
+    top: 25px;
+    left: 50px;
 }
 nav span {
     display: block;
@@ -167,6 +172,160 @@ nav h2 {
     height: 1px;
     width: 1px;
 }
+nav a{ 
+    font-size: 1em;
+    font-style: normal;
+}
+#logo{
+    background-color: var(--orange);
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    max-width: 400px;
+    text-align: center;
+    height: 70px;
+    margin: 0 auto;
+    box-shadow: var(--box-shadow);
+}
+#sign-in{
+    position: fixed;
+    top: 0;
+    right: 20px;
+    text-align: center;
+    height: 70px;
+    text-decoration: none;
+    color: var(--black);
+    
+}
+#search-bar{
+    position: absolute;
+    top: 150px;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+    width: 300px;
+}
+.search-container{
+    display: flex;
+    align-items: center;
+}
+.search-container label{
+    display: none;
+}
+.search-container button{
+    background: var(--orange);
+    border: none;
+    cursor: pointer;
+}
+#search-input{
+    border: 2px solid var(--orange);
+    flex-grow: 1;
+    padding: 13px;
+}
+main div p, #details, #ingredients, #directions, aside{
+    padding: 10px;
+}
+
+#details h2, #ingredients h2, #directions h2, aside h2{
+margin: 0 auto;
+text-align: center;
+}
+#details dl {
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+}
+#details dl dt{
+    font-weight: bold;
+}
+#ingredients-list{
+    list-style: square;
+    padding-left : 20px;
+    margin: 0;
+    font-family: "Montserrat";
+    font-size: 1.25em;
+}
+#ingredients-list li {
+    margin-bottom: 5px;
+}
+#directions-list{
+    list-style: decimal;
+    padding-left: 20px;
+    font-family: "Montserrat";
+    font-size: 1.25em;
+}
+#directions-list li{
+    padding: 10px;
+}
+aside{
+    background-color: var(--blue);
+    display: grid;
+}
+aside h2{
+    padding-bottom: 35px;
+}
+.side-dishes{
+    display:flex;
+    align-items: flex-start;
+    padding: 0 0 10px 10px;
+}
+.side-dishes div:nth-of-type(1){
+    padding-left: 10px;
+}
+.side-dishes h3, .rating dt{
+    font-weight: bold ;
+}
+.rating h4, .rating dd{
+    display: none;
+}
+.rating{
+    margin: 0 10px 10px 0;
+}
+.rating dl, .rating dt{
+    padding: 10px 10px 10px 0;
+}
+.side-dishes div:nth-of-type(1) .stars{
+    padding-left: 0px;
+}
+.side-dishes p{
+    padding-top: 10px;
+}
+.side-dishes div > *:not(h3){
+    margin-top: auto;
+}
+.hide{
+    display: none;
+}
+#socials{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px;
+    position: relative;
+    max-width: 100%;
+    box-sizing: border-box;
+}
+#copyright{
+    justify-content: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+}
+#copyright small{
+    font-weight: bold ;
+    font-size: 1.25em;
+    display: block;
+}
+#copyright img{
+    padding-bottom: 40px;
+    max-width: 50%;
+}
+
+
+
+
 /*-------------------- MEDIA QUERY (medium) --------------------------------*/
 
 /*-------------------- MEDIA QUERY (large) ------------------------------------*/
