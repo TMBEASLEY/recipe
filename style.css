@@ -3,19 +3,87 @@
 v2.0 | 20110126
 License: none (public domain)
 */
-html, body, div, span, applet, object, iframe,
-h1, h2, h3, h4, h5, h6, p, blockquote, pre,
-a, abbr, acronym, address, big, cite, code,
-del, dfn, em, img, ins, kbd, q, s, samp,
-small, strike, strong, sub, sup, tt, var,
-b, u, i, center,
-dl, dt, dd, ol, ul, li,
-fieldset, form, label, legend,
-table, caption, tbody, tfoot, thead, tr, th, td,
-article, aside, canvas, details, embed,
-figure, figcaption, footer, header, hgroup, 
-menu, nav, output, ruby, section, summary,
-time, mark, audio, video {
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
     margin: 0;
     padding: 0;
     border: 0;
@@ -23,55 +91,87 @@ time, mark, audio, video {
     font: inherit;
     vertical-align: baseline;
 }
+
 /* HTML5 display-role reset for older browsers */
-article, aside, details, figcaption, figure, 
-footer, header, hgroup, menu, nav, section {
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
     display: block;
 }
+
 body {
     line-height: 1;
 }
-ol, ul {
+
+ol,
+ul {
     list-style: none;
 }
-blockquote, q {
+
+blockquote,
+q {
     quotes: none;
 }
-blockquote:before, blockquote:after,
-q:before, q:after {
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
     content: '';
     content: none;
 }
+
 table {
     border-collapse: collapse;
     border-spacing: 0;
 }
+
 /* Root Variables */
-:root{
+:root {
     --black: #0D0D0D;
     --white: #F2F2F2;
-    --blue:#7ABFBF;
-    --transparent-blue:rgba(122, 191, 191, .5);
+    --blue: #7ABFBF;
+    --transparent-blue: rgba(122, 191, 191, .5);
     --orange: #EB5428;
     --box-shadow: 0px 3px 3px #bbb;
 }
 
 /*------------------------------ GLOBAL STYLES ------------------------------*/
-body{
+body {
     padding: 200px 0 0 0;
     margin: 0;
     background-color: var(--white);
     position: relative;
 }
-p, h4, dd, dt{
+
+p,
+h4,
+dd,
+dt {
     font-family: "Montserrat", serif;
     font-size: 1.25em;
 }
-h1, h2, h3, menu, nav, #socials, #copyright small{
+
+h1,
+h2,
+h3,
+menu,
+nav,
+#socials,
+#copyright small {
     font-family: "Bebas Neue", sans-serif;
     text-transform: uppercase;
 }
-h1{
+
+h1 {
     position: relative;
     top: 10px;
     display: flex;
@@ -81,25 +181,32 @@ h1{
     font-style: regular;
     padding: 50px;
 }
-h2{
+
+h2 {
     font-size: 1.75em;
 }
-h3{
+
+h3 {
     font-size: 1.5em;
 }
-#taco-pic{
+
+#taco-pic {
     display: inline-block;
     max-width: 100%;
     height: auto;
 }
-menu, #socials{
+
+menu,
+#socials {
     position: relative;
     display: flex;
     justify-content: space-evenly;
     width: 100%;
     padding: 0 0 10px 0;
 }
-menu a , #socials a{
+
+menu a,
+#socials a {
     font-size: 1.25em;
     display: flex;
     flex-direction: column;
@@ -107,15 +214,18 @@ menu a , #socials a{
     color: var(--orange);
     text-decoration: none;
 }
-menu li, #socials li{
+
+menu li,
+#socials li {
     list-style: none;
 }
+
 nav {
     grid-area: nav;
     min-width: 414px;
     position: fixed;
     top: 0;
-    z-index:5;
+    z-index: 5;
     height: 110px;
     margin: 0 auto;
     font-size: 1.5em;
@@ -123,6 +233,7 @@ nav {
     box-shadow: var(--box-shadow);
     width: 200%;
 }
+
 nav ul {
     grid-area: hamburger;
     padding: 0;
@@ -130,16 +241,19 @@ nav ul {
     list-style: none;
     overflow: hidden;
     max-height: 0;
-    
+
 }
+
 nav li img {
     display: none;
 }
+
 nav li a {
     display: block;
     padding: 20px;
     text-decoration: none;
 }
+
 nav label {
     cursor: pointer;
     display: inline-block;
@@ -148,36 +262,45 @@ nav label {
     top: 25px;
     left: 50px;
 }
+
 nav span {
     display: block;
     position: relative;
- }
+}
+
 nav label svg {
     display: block;
 }
-label span:before, label span:after {
+
+label span:before,
+label span:after {
     content: '';
     display: block;
     height: 100%;
     position: absolute;
     width: 100%;
 }
+
 nav input {
     display: none;
 }
-nav input:checked ~ ul {
+
+nav input:checked~ul {
     max-height: 550px;
 }
+
 nav h2 {
     visibility: hidden;
     height: 1px;
     width: 1px;
 }
-nav a{ 
+
+nav a {
     font-size: 1em;
     font-style: normal;
 }
-#logo{
+
+#logo {
     background-color: var(--orange);
     position: fixed;
     top: 0;
@@ -189,7 +312,8 @@ nav a{
     margin: 0 auto;
     box-shadow: var(--box-shadow);
 }
-#sign-in{
+
+#sign-in {
     position: fixed;
     top: 0;
     right: 20px;
@@ -197,9 +321,10 @@ nav a{
     height: 70px;
     text-decoration: none;
     color: var(--black);
-    
+
 }
-#search-bar{
+
+#search-bar {
     position: absolute;
     top: 150px;
     left: 0;
@@ -207,97 +332,131 @@ nav a{
     margin: 0 auto;
     width: 300px;
 }
-.search-container{
+
+.search-container {
     display: flex;
     align-items: center;
 }
-.search-container label{
+
+.search-container label {
     display: none;
 }
-.search-container button{
+
+.search-container button {
     background: var(--orange);
     border: none;
     cursor: pointer;
 }
-#search-input{
+
+#search-input {
     border: 2px solid var(--orange);
     flex-grow: 1;
     padding: 13px;
 }
-main div p, #details, #ingredients, #directions, aside{
+
+main div p,
+#details,
+#ingredients,
+#directions,
+aside {
     padding: 10px;
 }
 
-#details h2, #ingredients h2, #directions h2, aside h2{
-margin: 0 auto;
-text-align: center;
+#details h2,
+#ingredients h2,
+#directions h2,
+aside h2 {
+    margin: 0 auto;
+    text-align: center;
 }
+
 #details dl {
     display: grid;
     grid-template-columns: 1fr 4fr;
 }
-#details dl dt{
+
+#details dl dt {
     font-weight: bold;
 }
-#ingredients-list{
+
+#ingredients-list {
     list-style: square;
-    padding-left : 20px;
+    padding-left: 20px;
     margin: 0;
     font-family: "Montserrat";
     font-size: 1.25em;
 }
+
 #ingredients-list li {
     margin-bottom: 5px;
 }
-#directions-list{
+
+#directions-list {
     list-style: decimal;
     padding-left: 20px;
     font-family: "Montserrat";
     font-size: 1.25em;
 }
-#directions-list li{
+
+#directions-list li {
     padding: 10px;
 }
-aside{
+
+aside {
     background-color: var(--blue);
     display: grid;
 }
-aside h2{
+
+aside h2 {
     padding-bottom: 35px;
 }
-.side-dishes{
-    display:flex;
+
+.side-dishes {
+    display: flex;
     align-items: flex-start;
     padding: 0 0 10px 10px;
 }
-.side-dishes div:nth-of-type(1){
+
+.side-dishes div:nth-of-type(1) {
     padding-left: 10px;
 }
-.side-dishes h3, .rating dt{
-    font-weight: bold ;
+
+.side-dishes h3,
+.rating dt {
+    font-weight: bold;
 }
-.rating h4, .rating dd{
+
+.rating h4,
+.rating dd {
     display: none;
 }
-.rating{
+
+.rating {
     margin: 0 10px 10px 0;
 }
-.rating dl, .rating dt{
+
+.rating dl,
+.rating dt {
     padding: 10px 10px 10px 0;
 }
-.side-dishes div:nth-of-type(1) .stars{
+
+.side-dishes div:nth-of-type(1) .stars {
     padding-left: 0px;
 }
-.side-dishes p{
+
+.side-dishes p {
     padding-top: 10px;
 }
-.side-dishes div > *:not(h3){
+
+.side-dishes div>*:not(h3) {
     margin-top: auto;
 }
-.hide{
+
+.hide {
     display: none;
 }
-#socials{
+
+#socials {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -306,7 +465,8 @@ aside h2{
     max-width: 100%;
     box-sizing: border-box;
 }
-#copyright{
+
+#copyright {
     justify-content: center;
     display: flex;
     flex-direction: column-reverse;
@@ -314,15 +474,220 @@ aside h2{
     text-align: center;
     padding: 20px;
 }
-#copyright small{
-    font-weight: bold ;
+
+#copyright small {
+    font-weight: bold;
     font-size: 1.25em;
     display: block;
 }
-#copyright img{
+
+#copyright img {
     padding-bottom: 40px;
     max-width: 50%;
 }
+
 /*-------------------- MEDIA QUERY (medium) --------------------------------*/
+@media (min-width: 980px) {
+    #search-bar {
+        top: 0;
+        left: 150px;
+        z-index: 100;
+        position: fixed;
+        padding: 20px;
+    }
+
+    nav {
+        height: 310px;
+        text-align: center;
+        margin-bottom: 20px;
+    }
+
+    nav ul {
+        overflow: visible;
+        display: flex;
+        position: fixed;
+        justify-content: space-between;
+        top: 150px;
+    }
+
+    #logo {
+        max-width: 100px;
+        right: auto;
+    }
+
+    nav li img {
+        display: block;
+        max-width: 100px;
+        padding-bottom: 10px;
+    }
+
+    nav li a {
+        display: block;
+        color: var(--orange);
+        text-decoration: none;
+    }
+
+    h1 {
+        padding: 50px 0 20px 20px;
+        justify-content: left;
+    }
+
+    header {
+        padding-top: 90px;
+        position: relative;
+    }
+
+    #content-menu {
+        background: rgba(255, 255, 255, 0.5);
+        position: absolute;
+        padding-top: 10px;
+    }
+
+    #details h2,
+    #ingredients-directions h2 {
+        padding-bottom: 10px;
+    }
+
+    #details dl {
+        align-items: center;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+
+    #details dt {
+        grid-column: 2;
+    }
+
+    #details dd {
+        grid-column: 3;
+    }
+
+    #ingredients-directions {
+        display: grid;
+        grid-template-columns: 1.5fr 3fr;
+    }
+
+    #ingredients-list li {
+        padding: 5px 0 5px 0;
+    }
+
+    aside {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    aside h2 {
+        grid-column: 1/-1;
+        font-weight: bold;
+    }
+
+    footer {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    #copyright {
+        grid-column: 1;
+        grid-row: 1;
+    }
+}
 
 /*-------------------- MEDIA QUERY (large) ------------------------------------*/
+@media (min-width: 1278px) {
+    nav {
+        height: 110px;
+    }
+
+    nav ul {
+        top: 0;
+    }
+
+    nav li {
+        display: flex;
+        width: 150px;
+    }
+
+    nav li img {
+        width: 55px;
+    }
+
+    #search-bar {
+        top: 200px;
+        margin: 0 auto;
+        padding: 20px;
+        position: absolute;
+    }
+
+    h1 {
+        justify-content: center;
+    }
+
+    #content-menu {
+        flex-direction: column;
+        max-width: 100px;
+        height: 1149px;
+        background-color: var(--white);
+    }
+
+    #taco-pic {
+        height: 1149px;
+        width: 766px;
+    }
+
+    main div {
+        display: flex;
+    }
+
+    #p {
+        display: flex;
+        flex-direction: column;
+        font-size: 1.5em;
+    }
+
+    #details {
+        background-color: var(--black);
+        color: var(--blue);
+        display: grid;
+        grid-template-columns: repeat(5, 1fr);
+    }
+
+    #details h2 {
+        grid-column: 1/-1;
+    }
+
+    #details dl {
+        grid-template-columns: 1fr;
+    }
+
+    #details dt,
+    #details dd {
+        grid-column: auto;
+    }
+
+    aside{ 
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        width: 100%;
+    }
+    .side-dishes{
+        flex-direction: column;
+    }
+
+    #copyright {
+        display: flex;
+        flex-direction: row-reverse;
+    }
+
+    #small {
+        padding-bottom: 175px;
+    }
+
+    #copyright img {
+        width: 100%;
+    }
+
+    footer {
+        grid-template-columns: 2fr 1fr 2fr;
+    }
+
+    footer section:first-of-type {
+        grid-column: 3;
+        grid-row: 1;
+    }
