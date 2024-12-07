@@ -625,6 +625,7 @@ aside h2 {
         max-width: 100px;
         height: 1149px;
         background-color: var(--white);
+        padding: 0;
     }
 
     #taco-pic {
