@@ -663,11 +663,12 @@ aside h2 {
         grid-column: auto;
     }
 
-    aside{ 
+    aside {
         grid-template-columns: 1fr 1fr 1fr 1fr;
         width: 100%;
     }
-    .side-dishes{
+
+    .side-dishes {
         flex-direction: column;
     }
 
